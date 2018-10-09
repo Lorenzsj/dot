@@ -11,3 +11,7 @@
       kept-new-versions 6
       kept-old-versions 2
       version-control t)     ; use versioned backups
+
+(custom-set-variables
+ '(custom-enabled-themes (quote (tango-dark))))
+(custom-set-faces)
