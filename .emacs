@@ -4,6 +4,11 @@
 	     '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
+;;; CORE
+(when (version<= "26.0.50" emacs-version )
+  (global-display-line-numbers-mode))
+
+
 ;;; THEME
 (require 'doom-themes)
 (setq doom-themes-enable-bold t      ; if nil, bold is universally disabled
@@ -27,6 +32,12 @@
 (global-set-key (kbd "<s-down>") 'windmove-down)
 (global-set-key (kbd "<s-left>") 'windmove-left)
 (global-set-key (kbd "<s-right>") 'windmove-right)
+
+;;; PLUGINS
+;; neotree
+(add-to-list 'load-path "~/")
+(require 'neotree)
+(global-set-key (kbd "<f5>") 'neotree-toggle)
 
 ;;; MISC
 ;; redirect backups
